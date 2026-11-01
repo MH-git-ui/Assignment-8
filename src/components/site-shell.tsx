@@ -72,7 +72,11 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               </Link>
             ))}
             {!isPending && !session && (
-              <Link href="/register" className="mobile-register" onClick={() => setMenu(false)}>
+              <Link
+                href="/register"
+                className="mobile-register"
+                onClick={() => setMenu(false)}
+              >
                 Register
               </Link>
             )}
