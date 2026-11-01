@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { ArrowUpRight, LoaderCircle, Search } from "lucide-react";
 import { api, apiConfigured } from "@/lib/api";
 import { categories, previewBooks, type Book } from "@/lib/books";
@@ -8,9 +9,10 @@ import { BookCard } from "./book-card";
 import { Button, buttonVariants } from "./ui/button";
 import "./catalogue.css";
 export function Catalogue({ latest = false }: { latest?: boolean }) {
+  const params = useSearchParams();
   const [books, setBooks] = useState<Book[]>(apiConfigured ? [] : previewBooks);
   const [loading, setLoading] = useState(apiConfigured); const [error, setError] = useState("");
-  const [search, setSearch] = useState(""); const [category, setCategory] = useState(""); const [retry, setRetry] = useState(0);
+  const [search, setSearch] = useState(""); const [category, setCategory] = useState(params.get("category") || ""); const [retry, setRetry] = useState(0);
   useEffect(() => {
     if (!apiConfigured) return;
     const controller = new AbortController();
