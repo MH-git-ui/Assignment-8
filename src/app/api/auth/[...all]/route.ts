@@ -1,7 +1,6 @@
 import { toNextJsHandler } from "better-auth/next-js";
 import { getAuth } from "@/lib/auth";
 import { passwordError } from "@/lib/utils";
-export const runtime = "nodejs";
 async function handle(request: Request) {
   if (!process.env.MONGODB_URI || !process.env.BETTER_AUTH_SECRET || !process.env.BETTER_AUTH_URL) {
     if (new URL(request.url).pathname.endsWith("/get-session")) return Response.json(null);

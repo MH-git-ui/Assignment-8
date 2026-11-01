@@ -1,5 +1,4 @@
 import { getAuth } from "@/lib/auth";
-export const runtime = "nodejs";
 export async function POST(request: Request) {
   if (!process.env.MONGODB_URI || !process.env.BETTER_AUTH_SECRET || !process.env.IMGBB_API_KEY) return Response.json({ message: "Image uploads are temporarily unavailable." }, { status: 503 });
   const session = await getAuth().api.getSession({ headers: request.headers });

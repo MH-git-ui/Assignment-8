@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
@@ -16,7 +17,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
   return <><a href="#main-content" className="skip-link">Skip to content</a>
     <header className="site-header"><div className="container nav-inner"><Logo />
       <nav aria-label="Main navigation" className={`main-nav ${menu ? "is-open" : ""}`}>{links.map(link => <Link key={link.href} href={link.href} onClick={() => setMenu(false)} aria-current={pathname === link.href ? "page" : undefined}>{link.label}</Link>)}</nav>
-      <div className="nav-actions">{!isPending && (session ? <Dropdown.Root><Dropdown.Trigger className="avatar" aria-label="Open account menu">{session.user.image ? /* eslint-disable-next-line @next/next/no-img-element */ <img src={session.user.image} alt={session.user.name} referrerPolicy="no-referrer" /> : session.user.name.slice(0, 1).toUpperCase()}</Dropdown.Trigger><Dropdown.Portal><Dropdown.Content className="account-menu" sideOffset={12} align="end"><Dropdown.Label className="account-name">{session.user.name}</Dropdown.Label><Dropdown.Item asChild><Link href="/my-profile"><UserRound size={16} />My Profile</Link></Dropdown.Item><Dropdown.Item onSelect={logout}><LogOut size={16} />Log out</Dropdown.Item></Dropdown.Content></Dropdown.Portal></Dropdown.Root> : <><Link className="login-link" href="/login">Log in</Link><Link className={buttonVariants()} href="/register">Get started <ArrowUpRight size={14} /></Link></>)}
+      <div className="nav-actions">{!isPending && (session ? <Dropdown.Root><Dropdown.Trigger className="avatar" aria-label="Open account menu">{session.user.image ?  <img src={session.user.image} alt={session.user.name} referrerPolicy="no-referrer" /> : session.user.name.slice(0, 1).toUpperCase()}</Dropdown.Trigger><Dropdown.Portal><Dropdown.Content className="account-menu" sideOffset={12} align="end"><Dropdown.Label className="account-name">{session.user.name}</Dropdown.Label><Dropdown.Item asChild><Link href="/my-profile"><UserRound size={16} />My Profile</Link></Dropdown.Item><Dropdown.Item onSelect={logout}><LogOut size={16} />Log out</Dropdown.Item></Dropdown.Content></Dropdown.Portal></Dropdown.Root> : <><Link className="login-link" href="/login">Log in</Link><Link className={buttonVariants()} href="/register">Get started <ArrowUpRight size={14} /></Link></>)}
       <button className="icon-button mobile-toggle" aria-label={menu ? "Close navigation" : "Open navigation"} aria-expanded={menu} onClick={() => setMenu(!menu)}>{menu ? <X size={20} /> : <Menu size={20} />}</button></div>
     </div></header>
     <main id="main-content">{children}</main>
@@ -24,3 +25,4 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
     <Toaster richColors theme="dark" position="bottom-right" closeButton />
   </>;
 }
+
