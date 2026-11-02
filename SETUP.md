@@ -49,7 +49,7 @@ Run `pnpm install`, then `pnpm dev`. Set the client `NEXT_PUBLIC_API_URL=http://
 
 Deploy the Express repository on a Node-compatible host and the client on Vercel or another Next.js-compatible host. Configure production environment variables on each platform. The client URL must match `BETTER_AUTH_URL`, the API's `CLIENT_ORIGIN` and `AUTH_ISSUER`, and the origin in `JWKS_URL`. Set `NEXT_PUBLIC_API_URL` to the HTTPS API URL before building the client. No trailing slashes on configured origins.
 
-Replace example contact/social destinations, add the real live URL to README, and verify:
+For a new deployment, update the live URL in README and verify:
 
 1. Registration validation, email login, Google login, and logout.
 2. Private-route refresh retains the logged-in user and return-to-login redirects work.
@@ -58,4 +58,4 @@ Replace example contact/social destinations, add the real live URL to README, an
 5. A second account cannot edit/delete another user's books or return their loans.
 6. Desktop, tablet, mobile, unknown routes, and direct-link reloads.
 
-Automated API tests use their own temporary MongoDB replica set, never your configured database. Google OAuth, imgbb, and production hosting still need live verification after setup.
+Automated API tests use their own temporary MongoDB replica set, never your configured database. The configured production deployment passed Google OAuth, imgbb, and API workflow checks on 2 November 2026; see VERIFICATION.md. Repeat those checks when configuring a new environment.

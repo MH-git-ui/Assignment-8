@@ -2,7 +2,7 @@
 
 A small online library built with Next.js, BetterAuth, and a separate Express/MongoDB API. The interface follows the approved Figma Concept C, **After Hours**.
 
-**Live site:** Not deployed yet. A public URL must be added here before assignment submission.
+**Live site:** https://booknook-assignment-8.vercel.app
 
 ## Features
 
@@ -47,7 +47,7 @@ The database is the source of truth when the API is configured. Public catalogue
 
 The client and server have separate repositories and meaningful feature commits. The minimum is 15 client and 8 server commits; verify with `git log --oneline` in each repository.
 
-Pending external configuration: MongoDB Atlas, Google OAuth, imgbb, and deployment. The footer's example contact address and generic social destinations must be replaced with the owner's real contact details before publishing. Password reset and email verification are intentionally not enabled, per the assignment.
+MongoDB Atlas, Google OAuth (published), imgbb, and both Vercel deployments are configured and live-tested. The catalogue starts empty and is populated through Add Book. Password reset and email verification are intentionally not enabled, per the assignment.
 
 Design source: https://www.figma.com/design/4CS6nG9ZuBBWpFkaLjJGkB?node-id=9-640
 
@@ -57,4 +57,4 @@ Design source: https://www.figma.com/design/4CS6nG9ZuBBWpFkaLjJGkB?node-id=9-640
 - API: https://booknook-assignment-8-server.vercel.app
 - Public data-use notice: `/privacy`
 
-MongoDB Atlas, imgbb, and Google OAuth credentials are configured in ignored local environment files and production hosting secrets. Never commit credential values. Google public publishing and the final end-to-end live checks must be confirmed separately.
+MongoDB Atlas, imgbb, and Google OAuth credentials are configured in ignored local environment files and production hosting secrets. Never commit credential values. Google sign-in is in production. See [VERIFICATION.md](VERIFICATION.md) for the live checks completed on 2 November 2026.

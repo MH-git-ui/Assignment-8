@@ -167,20 +167,20 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
               <a href="mailto:mh4846111@gmail.com">mh4846111@gmail.com</a>
               <div className="footer-links mt-4">
                 <a
-                  href="https://www.instagram.com/"
+                  href="https://github.com/MH-git-ui"
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="Instagram (opens in a new tab)"
+                  aria-label="GitHub (opens in a new tab)"
                 >
-                  Instagram ↗
+                  GitHub ↗
                 </a>
                 <a
-                  href="https://x.com/"
+                  href="https://github.com/MH-git-ui/Assignment-8"
                   target="_blank"
                   rel="noreferrer"
-                  aria-label="X (opens in a new tab)"
+                  aria-label="Source code (opens in a new tab)"
                 >
-                  X ↗
+                  Source code ↗
                 </a>
               </div>
             </div>
