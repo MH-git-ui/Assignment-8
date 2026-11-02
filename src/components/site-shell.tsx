@@ -164,7 +164,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             </div>
             <div>
               <p className="eyebrow">Say hello</p>
-              <a href="mailto:hello@booknook.example">hello@booknook.example</a>
+              <a href="mailto:mh4846111@gmail.com">mh4846111@gmail.com</a>
               <div className="footer-links mt-4">
                 <a
                   href="https://www.instagram.com/"
@@ -189,7 +189,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             <span>
               © {new Date().getFullYear()} BookNook. All rights reserved.
             </span>
-            <span>One more chapter.</span>
+            <Link href="/privacy">Privacy</Link>
           </div>
         </div>
       </footer>

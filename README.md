@@ -50,3 +50,11 @@ The client and server have separate repositories and meaningful feature commits.
 Pending external configuration: MongoDB Atlas, Google OAuth, imgbb, and deployment. The footer's example contact address and generic social destinations must be replaced with the owner's real contact details before publishing. Password reset and email verification are intentionally not enabled, per the assignment.
 
 Design source: https://www.figma.com/design/4CS6nG9ZuBBWpFkaLjJGkB?node-id=9-640
+
+## Production services
+
+- Website: https://booknook-assignment-8.vercel.app
+- API: https://booknook-assignment-8-server.vercel.app
+- Public data-use notice: `/privacy`
+
+MongoDB Atlas, imgbb, and Google OAuth credentials are configured in ignored local environment files and production hosting secrets. Never commit credential values. Google public publishing and the final end-to-end live checks must be confirmed separately.
